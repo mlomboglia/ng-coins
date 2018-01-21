@@ -21,7 +21,7 @@ export class HeaderComponent {
       (authenticated) => {
         this.isAuthenticated = authenticated;
         if (authenticated) {
-          this.router.navigate(['/recipes']);
+          this.router.navigate(['/dashboard']);
         } else {
           this.router.navigate(['/']);
         }

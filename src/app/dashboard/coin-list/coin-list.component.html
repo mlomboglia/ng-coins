@@ -1,0 +1,32 @@
+<!-- Basic Table -->
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Price (USD)</th>
+        <th>Market Cap (USD)</th>
+        <th>Total Supply</th>
+        <th>Change 1h (%)</th>
+        <th>Change 24h (%)</th>
+        <th>Change 7d (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let coin of coins">
+        <td>{{ coin.rank }}</td>
+        <td>{{ coin.name }}</td>
+        <td>{{ coin.symbol }}</td>
+        <td  align="right">{{ coin.price_usd | currency }}</td>
+        <td  align="right">{{ coin.market_cap_usd | currency }}</td>
+        <td  align="right">{{ coin.total_supply | number }}</td>
+        <td  align="right" [style.color] = "coin.percent_change_1h < 0 ? 'red' : 'green'">{{ coin.percent_change_1h | number }}</td>
+        <td  align="right" [style.color] = "coin.percent_change_24h < 0 ? 'red' : 'green'" >{{ coin.percent_change_24h | number }}</td>
+        <td  align="right" [style.color] = "coin.percent_change_7d < 0 ? 'red' : 'green'" >{{ coin.percent_change_7d | number }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- End Basic Table -->

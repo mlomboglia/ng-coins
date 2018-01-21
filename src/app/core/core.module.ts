@@ -1,3 +1,4 @@
+import { CoinMarketCapService } from './../dashboard/coinmarketcap/coinmarketcap.service';
 import { CryptoCompareService } from './../dashboard/cryptocompare/cryptocompare.service';
 import { FooterComponent } from './footer/footer.component';
 import { NgModule } from '@angular/core';
@@ -31,7 +32,8 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
     DashboardService,
     DataStorageService,
     AuthService,
-    CryptoCompareService
+    CryptoCompareService,
+    CoinMarketCapService
   ]
 })
 export class CoreModule {}
